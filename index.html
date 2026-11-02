@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+            max-width: 750px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #263238;
+        }
+
+        form, .task-item {
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+
+        input, textarea {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 4px;
+            cursor: pointer;
+        }
+
+        .task-title {
+            font-weight: bold;
+        }
+
+        .task-description {
+            color: #444;
+        }
+
+        .task-status {
+            color: #666;
+        }
+
+        #status-message {
+            margin: 15px 0;
+        }
+    </style>
+
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <h1>Task Manager</h1>
+    <p>Student ID: <span id="student-id">71521</span></p>
+
+    <form id="task-form">
+        <input
+            type="text"
+            id="task-title"
+            placeholder="Enter task title"
+            required
+        >
+
+        <textarea
+            id="task-description"
+            placeholder="Enter task description"
+        ></textarea>
+
+        <button type="submit" id="task-submit">
+            Save Task
+        </button>
+    </form>
+
+    <p id="status-message" role="status"></p>
+
+    <h2>Task List</h2>
+    <div id="task-list"></div>
+
+    <a href="contribution.html" id="contribution-link">
+        Team Contribution
+    </a>
+
+</body>
+</html>
